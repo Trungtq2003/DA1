@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <script src="https://use.fontawesome.com/390065aef6.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <title>Document</title>
     <style>
 
@@ -31,20 +32,51 @@
     <!-- HOI DAP -->
     <div class="m-auto max-w-6xl px-2">
         <div class="grid grid-cols-4 gap-2">
-            <div class="">
+            <div class="pr-4">
                 <div class="border-b py-4"><h3 class="text-xl font-bold">Danh mục câu hỏi thường gặp</h3></div>
                 <div class="border-b py-4"><a href="" class="font-bold ">Xem tất cả</a></div>
-                <ul>
-                    <li class="py-3"><a href="">Các hình thức mua hàng Losupply</a>
-                        <ul class="hidden">
-                            <li>Hiểu về công nợ Losupply</li>
+                <ul class="dropdown-menu">
+                    <li class="py-3">Các hình thức mua hàng Losupply<i class="icon-menu cursor-pointer fa fa-chevron-down float-right" aria-hidden="true"></i>
+                        <ul class="pt-2 sub-menu hidden">
+                            <li><a href="" class="p-4 bg-[#ebebeb] block">Hiểu về công nợ Losupply</a></li>
                         </ul>
                     </li>
-                    <li class="py-3"><a href="">Công thức chế biến</a></li>
-                    <li class="py-3"><a href="">Đối tác cửa hàng</a></li>
-                    <li class="py-3"><a href="">Khách hàng</a></li>
-                    <li class="py-3"><a href="">Losupply</a></li>
-                    <li class="py-3"><a href="">Shipper - Chiến binh Giao hàng</a></li>
+                    <li class="py-3">Công thức chế biến<i class="icon-menu cursor-pointer fa fa-chevron-down float-right" aria-hidden="true"></i>
+                        <ul class="pt-2 sub-menu hidden">
+                            <li><a href="" class="p-4 bg-[#ebebeb] block">Ăn gì cùng Losupply</a></li>
+                        </ul>
+                    </li>
+                    <li class="py-3">>Đối tác cửa hàng<i class="icon-menu cursor-pointer fa fa-chevron-down float-right" aria-hidden="true"></i>
+                        <ul class="pt-2 sub-menu hidden">
+                            <li><a href="" class="p-4 bg-[#ebebeb] block">Liên hệ quảng cáo</a></li>
+                            <li><a href="" class="p-4 bg-[#ebebeb] block">Vấn đề mở cửa hàng</a></li>
+                        </ul>
+                    </li>
+                    <li class="py-3">Khách hàng<i class="icon-menu cursor-pointer fa fa-chevron-down float-right" aria-hidden="true"></i>
+                        <ul class="pt-2 sub-menu hidden">
+                            <li><a href="" class="p-4 bg-[#ebebeb] block">Các câu hỏi về Loship</a></li>
+                            <li><a href="" class="p-4 bg-[#ebebeb] block">Câu hỏi dịch vụ vận chuyển khác</a></li>
+                            <li><a href="" class="p-4 bg-[#ebebeb] block">Câu hỏi về mã khuyến mãi</a></li>
+                            <li><a href="" class="p-4 bg-[#ebebeb] block">Góc thảo luận</a></li>
+                            <li><a href="" class="p-4 bg-[#ebebeb] block">Hướng dẫn sử dụng app Loship</a></li>
+                            <li><a href="" class="p-4 bg-[#ebebeb] block">Thanh toán online</a></li>
+                            <li><a href="" class="p-4 bg-[#ebebeb] block">Xư lý lỗi ứng dụng, website</a></li>
+                        </ul>
+                    </li>
+                    <li class="py-3">Losupply<i class="icon-menu cursor-pointer fa fa-chevron-down float-right" aria-hidden="true"></i>
+                        <ul class="pt-2 sub-menu hidden">
+                            <li><a href="" class="p-4 bg-[#ebebeb] block">Chia sẻ sản phẩm Losupply</a></li>
+                            <li><a href="" class="p-4 bg-[#ebebeb] block">Đại lý tỉnh của Losupply</a></li>
+                            <li><a href="" class="p-4 bg-[#ebebeb] block">Tư vấn mở quán</a></li>
+                        </ul>
+                    </li>
+                    <li class="py-3">Shipper - Chiến binh Giao hàng<i class="icon-menu cursor-pointer fa fa-chevron-down float-right" aria-hidden="true"></i>
+                        <ul class="pt-2 sub-menu hidden">
+                            <li><a href="" class="p-4 bg-[#ebebeb] block">Câu hỏi thường gặp</a></li>
+                            <li><a href="" class="p-4 bg-[#ebebeb] block">Chính sách hỗ trợ</a></li>
+                            <li><a href="" class="p-4 bg-[#ebebeb] block">Hiểu về Thuế Thu nhập cá nhân theo qui định nhà nước</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
             
@@ -92,5 +124,14 @@
     <div>
 
     </div>
+
+    <script>
+        $(document).ready(function (){
+        $('.dropdown-menu .icon-menu').click(function () {
+            $(this).parent('li').children('.sub-menu').slideToggle();
+            $(this).toggleClass('fa-chevron-down fa-chevron-right');
+        });
+    });
+    </script>
 </body>
 </html>
